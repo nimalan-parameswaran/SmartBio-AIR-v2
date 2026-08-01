@@ -1,0 +1,96 @@
+{
+    "recommendations": [
+        "[\"Increase light intensity if green index is low and light is below 500 lux.\", \"Inspect pump motor speed if water flow rate deviates from target value.\", \"Verify algae culture density; consider partial harvesting to prevent light blocking.\", \"Check temperature controls; ensure water stays between 20\\u00b0C and 28\\u00b0C.\"]",
+        "(AI System Notice: Gemini API was offline or unauthorized. Displaying automated diagnostics.)"
+    ],
+    "alerts": [
+        {
+            "id": "algae_warn_1785512342",
+            "type": "warning",
+            "source": "Algae Health Agent",
+            "message": "Algae stress warning. Health index decreased to 67.1%. Inspect nutrients.",
+            "timestamp": 1785512342.3026545
+        }
+    ],
+    "reports": {
+        "last_generated_type": "daily",
+        "timestamp": 1785512342.6140249,
+        "summary": "Smart BIO AIR AI Agent successfully compiled the daily report. System diagnostics, anomaly evaluations, and Google Gemini advice logs are archived.",
+        "pdf_path": "C:\\Users\\nimal\\Downloads\\SMARTBIO AIR\\project\\SmartBio-AIR-v2\\backend\\reports\\daily_report_1785512342.pdf",
+        "pdf_filename": "daily_report_1785512342.pdf"
+    },
+    "agent_logs": [
+        {
+            "agent": "Sensor Validation Agent",
+            "status": "COMPLETED",
+            "execution_time_ms": 0.0,
+            "confidence_score": 100.0,
+            "latest_decision": "Validated 14/14 sensor feeds.",
+            "reasoning": "All sensors passed validation checks."
+        },
+        {
+            "agent": "Environment Analysis Agent",
+            "status": "COMPLETED",
+            "execution_time_ms": 0.0,
+            "confidence_score": 95.0,
+            "latest_decision": "Comfort Index: 98.8%, Stability: 96.0%.",
+            "reasoning": "Bioreactor environment stability stands at 96.0%. Air comfort is 98.8% based on target metrics."
+        },
+        {
+            "agent": "Algae Health Agent",
+            "status": "COMPLETED",
+            "execution_time_ms": 0.0,
+            "confidence_score": 90.0,
+            "latest_decision": "Algae health: 67.1%, biomass: 0.186 g/L.",
+            "reasoning": "Stress index is at 8.0%, and photosynthesis efficiency stands at 50.5%."
+        },
+        {
+            "agent": "Prediction Agent",
+            "status": "COMPLETED",
+            "execution_time_ms": 0.0,
+            "confidence_score": 85.0,
+            "latest_decision": "1h green index forecast: 0.975, 24h: 2.04.",
+            "reasoning": "Logistic algae growth models growth velocity. Circadian variations project temperature cycles."
+        },
+        {
+            "agent": "Anomaly Detection Agent",
+            "status": "COMPLETED",
+            "execution_time_ms": 0.0,
+            "confidence_score": 98.0,
+            "latest_decision": "Detected 0 critical issues and 1 warnings.",
+            "reasoning": "Analyzed telemetry against biological limit bounds and electrical thresholds."
+        },
+        {
+            "agent": "Maintenance Agent",
+            "status": "COMPLETED",
+            "execution_time_ms": 0.0,
+            "confidence_score": 92.0,
+            "latest_decision": "Motor health estimated at 97.6%. Cleaning due in 10.0 days.",
+            "reasoning": "Based on 120.63 total motor run-hours. Sensor quality is at 100.0%."
+        },
+        {
+            "agent": "Recommendation Agent",
+            "status": "COMPLETED",
+            "execution_time_ms": 117.2,
+            "confidence_score": 90.0,
+            "latest_decision": "Generated 2 diagnostic recommendations.",
+            "reasoning": "Gemini analyzed sensor deviations, heat logs, and biological parameters."
+        },
+        {
+            "agent": "Research Agent",
+            "status": "COMPLETED",
+            "execution_time_ms": 194.1,
+            "confidence_score": 88.0,
+            "latest_decision": "Completed biological growth analysis log entry.",
+            "reasoning": "Gemini analyzed correlation between green index, light intensity, and indoor gas profiles."
+        },
+        {
+            "agent": "Report Agent",
+            "status": "COMPLETED",
+            "execution_time_ms": 10.2,
+            "confidence_score": 95.0,
+            "latest_decision": "Compiled daily report. PDF generated: daily_report_1785512342.pdf.",
+            "reasoning": "Aggregated all system nodes diagnostics, recommendations, and research logs."
+        }
+    ]
+}
