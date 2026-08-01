@@ -77,6 +77,11 @@ By integrating biological air purification with Edge AI, TinyML, cloud-native mu
 
 ---
 ## System Workflow
+
+<p align="center">
+  <img src="img/system workflow.png" width=auto>
+</p>
+
 ---
 
 ## System Architecture
@@ -321,3 +326,13 @@ Ensure you have:
       "emergency_stop": false
     }
     ```
+## License
+
+This project is licensed under the MIT License. Refer to the LICENSE file for details.
+
+---
+
+## Contribution Notes
+
+This repository is intended for research and educational use. Contributors are encouraged to document experimental conditions, sensor calibration steps, and data collection procedures clearly when submitting updates.
+
