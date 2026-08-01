@@ -170,7 +170,7 @@ graph TD
 
 <h3 align="center"> Prototype </h3>
 <p align="center">
-  <img src="img/Img2.png" width="45%" />
+  <img src="img/Img2_.png" width="45%" />
   <img src="img/algae bioreactor.gif" width="45%" /> 
 </p>
 
