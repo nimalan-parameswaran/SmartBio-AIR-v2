@@ -178,7 +178,7 @@ graph TD
 
 <div align="center">
   <img src="img/img3.png" width="45%" />
-  <img src="img/img4.png" width="45%" />
+  <img src="img/img4_.png" width="45%" />
 </div>
 
 ---
