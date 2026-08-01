@@ -148,7 +148,7 @@ graph TD
     fastapi -- "Update Analytics & Reports Node" --> firebase
     firebase -- "React Hook Listeners (Real-time Sync)" --> nextjs
     nextjs -- "Fetch PDF/CSV Reports" --> fastapi
-    chat -- "Query Chat API (/api/ask-ai)" --> fastapi
+    chat --> fastapi
     nextjs -- "Manual Actuator Override Settings" --> firebase
     firebase -- "Device Command Node Pull" --> esp32
 ```
