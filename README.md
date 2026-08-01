@@ -1,35 +1,88 @@
-# Smart BIO AIR Version 2.0 – AI Multi-Agent Bioreactor Platform
+<div align="center">
+  <p><a><img width="100%" src="img/SmartBio Air.png"></a></p>
+</div>
 
-**Smart BIO AIR Version 2.0** is an AI-driven, autonomous algae cultivation and indoor air purification platform. By combining IoT telemetry (ESP32), cloud database synchronization (Firebase Realtime Database), mathematical biological models, and a **LangGraph Multi-Agent AI system** running on **Google Gemini**, the system predicts biological health, detects sensor anomalies, estimates carbon sequestration/purification efficiency, and automates motor controls.
+PublishDate: 2026-08-01
 
----
+Title: **Smart BIO AIR Version 2.0:** Agentic AI-Driven Indoor Algae Based Air Purification System Using MYOSA Mini IoT Kit
 
-## 🏗️ System Architecture
-
-```
-  [ ESP32 IoT Sensors ]
-           │
-           ▼ (HTTPS / REST Telemetry)
- [ Firebase Realtime Database ]
-           │
-           ▼ (Server-Sent Events Stream / REST listener)
-   [ FastAPI AI Backend ]
-           │
-           ▼ (LangGraph Supervisor)
-  ┌────────────────────────────────────────────────────────┐
-  │ Sensor validation ──► Env Analysis ──► Algae Health    │
-  │        │                                  │            │
-  │        ▼                                  ▼            │
-  │ Report Compile ◄── Research ◄── Recommend ◄── Forecast │
-  └────────────────────────────────────────────────────────┘
-           │
-           ▼ (Updates Firebase Nodes & Reports Path)
-  [ Next.js React Dashboard ] ◄─── (User Controls & Ask AI Chat)
-```
+An AI-powered autonomous algae bioreactor that combines Edge AI, IoT, LangGraph multi-agent reasoning, and cloud analytics to monitor biological health, predict system behaviour, automate maintenance, and improve indoor air quality.
 
 ---
 
-## 📁 Folder Structure
+## Contributors  
+
+- **Nimalan Parameswaran** - [@nimalan-parameswaran](https://github.com/nimalan-parameswaran)  
+- **Dhakshatha M K** - [@DhakshathaMylsamy](https://github.com/DhakshathaMylsamy)
+  
+---
+
+## Acknowledgement 
+We express our sincere gratitude to **Dr. Dinesh Chellappan**, Centre for Research and Development, for his valuable guidance, technical direction, and continuous mentorship throughout this project.
+
+We also extend our heartfelt thanks to the **IEEE Sensors Council** for sponsoring the **MYOSA Mini IoT Kit**, which played a crucial role in enabling the development and implementation of this work.
+
+---
+
+<p align="center">
+  <img src="img/Img1.jpg" width="600">
+</p>
+
+---
+
+## Overview
+
+**Smart BIO AIR Version 2.0** is an AI-powered autonomous algae bioreactor platform designed to improve indoor air quality while serving as an intelligent research platform for biological and environmental monitoring. The system combines living microalgae, Edge AI, IoT sensing, cloud computing, and a multi-agent artificial intelligence framework to continuously monitor environmental conditions, evaluate algae health, predict future system behaviour, and assist operators with real-time decision making.
+
+The platform was developed as the next-generation evolution of **Smart BIO AIR Version 1**, following technical feedback received from researchers, scientists, industry professionals, and academic experts during **APSCON 2026** in New Delhi. Practical deployment of the first prototype highlighted several real-world challenges, including algae decomposition, odour generation, hardware degradation, cloud communication latency, and the absence of predictive intelligence. Version 2.0 addresses these limitations through a completely redesigned software architecture centred around autonomous AI agents and predictive analytics.
+
+At the hardware level, the system uses the **MYOSA Mini IoT Kit (ESP32)** to acquire real-time telemetry from environmental sensors, gas sensors, motor diagnostics, and the algae cultivation chamber. Safety-critical operations such as motor control and TinyML-based fault detection continue to execute locally on the edge device, allowing uninterrupted operation even during temporary network failures.
+
+Sensor telemetry is synchronised with the cloud through **Firebase Realtime Database**, where a **FastAPI** backend orchestrates a **LangGraph Multi-Agent AI pipeline** powered by **Google Gemini**. Rather than relying on a single AI model, the platform distributes intelligence across multiple specialised agents responsible for sensor validation, environmental analysis, algae health assessment, prediction, anomaly detection, predictive maintenance, recommendations, scientific research summarisation, and automated report generation. This modular architecture enables the system to reason about biological and operational conditions in a structured and explainable manner.
+
+A modern **Next.js** dashboard functions as the operational command centre, presenting live telemetry, biological health indicators, predictive trend visualisations, AI-generated recommendations, maintenance schedules, active alerts, and an interactive "Ask AI" assistant for researchers and operators. The platform also generates downloadable PDF diagnostic reports and CSV telemetry datasets, supporting long-term environmental studies and experimental documentation.
+
+To improve real-world usability, Version 2.0 introduces an activated carbon filtration stage that significantly reduces odour released from the algae chamber while maintaining biological activity. The prototype was evaluated under indoor conditions in a closed 250 sq ft room in Coimbatore over five experimental trials, demonstrating an average reduction of approximately **30% in both AQI and CO₂ concentrations within two hours**, while maintaining stable autonomous operation throughout the testing period.
+
+Smart BIO AIR Version 2.0 is more than an indoor air purification system. It is an intelligent cyber-physical platform that combines biological engineering, Edge AI, IoT, cloud computing, Large Language Models, and multi-agent artificial intelligence to create a next-generation autonomous environmental monitoring and algae bioreactor research system. The platform is intended for applications in indoor environmental management, smart buildings, sustainable biotechnology, educational laboratories, and future AI-assisted biological research.
+
+---
+## Solution
+
+Smart BIO AIR Version 2.0 addresses the limitations of conventional indoor air purifiers and first-generation algae-based purification systems by combining biological air treatment, Edge AI, IoT sensing, cloud computing, and Multi-Agent Artificial Intelligence into a unified autonomous platform.
+
+The system employs **living microalgae (*Chlorella vulgaris*)** as the primary biological medium for capturing carbon dioxide and supporting natural oxygen generation. Unlike conventional filtration systems that only trap airborne pollutants, the algae bioreactor performs continuous biological treatment while simultaneously serving as a living research model for studying environmental changes and biomass growth.
+
+At the edge layer, the **MYOSA Mini IoT Kit (ESP32)** continuously acquires telemetry from multiple environmental sensors, gas sensors, motor diagnostics, and the algae cultivation chamber. Safety-critical operations—including motor control, relay management, sensor monitoring, and TinyML-based fault detection—are executed locally on the microcontroller. This enables uninterrupted operation even during temporary internet outages and significantly reduces response latency for hardware protection.
+
+Sensor telemetry is synchronised with the cloud through **Firebase Realtime Database**, where a **FastAPI** backend processes incoming data and coordinates a **LangGraph Multi-Agent AI framework** powered by **Google Gemini**. Instead of relying on a single AI model, the platform distributes analytical responsibilities across specialised agents responsible for:
+
+- Sensor validation and data quality assessment
+- Environmental condition analysis
+- Algae health and biomass estimation
+- Future state prediction
+- Anomaly detection
+- Predictive maintenance
+- AI-generated operational recommendations
+- Scientific research summarisation
+- Automated report generation
+
+This agent-based architecture enables the system to move beyond simple monitoring by continuously interpreting environmental conditions, predicting biological behaviour, detecting abnormal events before failures occur, and generating explainable recommendations for researchers and operators.
+
+To overcome practical deployment challenges identified during Smart BIO AIR Version 1, Version 2.0 incorporates several engineering improvements. An **activated carbon filtration stage** has been integrated to minimise odour released from the algae chamber, while predictive maintenance algorithms estimate motor health, remaining useful life, and sensor calibration schedules. These enhancements increase long-term reliability and reduce manual maintenance requirements.
+
+A modern **Next.js** web dashboard serves as the operational command centre, providing live telemetry visualisation, biological health indicators, AI-generated diagnostics, predictive analytics, actuator controls, maintenance schedules, and an interactive **Ask AI** assistant for real-time system interaction. Researchers can also generate PDF diagnostic reports and CSV telemetry datasets for long-term analysis and documentation.
+
+By integrating biological air purification with Edge AI, TinyML, cloud-native multi-agent intelligence, predictive analytics, and real-time visualisation, Smart BIO AIR Version 2.0 evolves from a prototype air purifier into an intelligent autonomous bioreactor platform capable of supporting sustainable indoor air purification, scientific research, and future AI-assisted environmental monitoring applications.
+
+---
+
+## System Architecture
+
+
+---
+
+## Folder Structure
 
 ```
 SmartBio-AIR-v2/
@@ -123,7 +176,7 @@ SmartBio-AIR-v2/
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ### 1. Prerequisites
 Ensure you have:
@@ -133,7 +186,7 @@ Ensure you have:
 ### 2. Backend Setup
 1. Open a terminal, navigate to `/backend`, and create a `.env` file:
    ```env
-   GEMINI_API_KEY=your_gemini_api_key
+   GEMINI_API_KEY="your_gemini_api_key"
    FIREBASE_DATABASE_URL=https://your-project-rtdb.firebaseio.com
    FIREBASE_PROJECT_ID=your-project-id
    DATABASE_MODE=firebase # Set to 'local' to run offline without Firebase
@@ -162,7 +215,7 @@ Ensure you have:
 
 ---
 
-## 📡 REST API Documentation
+## REST API Documentation
 
 ### Telemetry & Diagnostics
 * **`GET /api/latest`**: Returns the most recent telemetry packet and calculated analytics.
