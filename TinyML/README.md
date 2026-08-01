@@ -232,12 +232,12 @@ The evaluation confirms stable behaviour on unseen samples.
 
 ## 10. Directory Structure
 
-```TinyML_MotorPumpFaultDetection/
+```TinyML
 
 
-├── FaultDetection_Inferencing/
-│ ├── Test_interface.ino
-├── FaultDetection_ModelFile/
+├── test inference/
+│ ├── test_interface.ino
+├── fault diagnosis and anomaly detection/
 │ ├── ei-myosa-6vdmp-fault-detection-arduino-1.0.2-TFlite.zip !use 
 │ ├── ei-myosa-6vdmp-fault-detection-arduino-1.0.2-EON.zip
 ├── src/
