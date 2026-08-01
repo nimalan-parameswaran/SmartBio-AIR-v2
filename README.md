@@ -33,6 +33,7 @@
 
 ```
 SmartBio-AIR-v2/
+├── system documentation.md         # System documentation (Agents & Dashboard)
 ├── backend/                        # FastAPI Python backend
 │   ├── app.py                      # FastAPI entrypoint (starts listeners & simulation)
 │   ├── config.py                   # App configurations & ENV loading
