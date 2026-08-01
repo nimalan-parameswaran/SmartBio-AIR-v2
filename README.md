@@ -88,6 +88,10 @@ A modern **Next.js** web dashboard serves as the operational command centre, pro
 
 By integrating biological air purification with Edge AI, TinyML, cloud-native multi-agent intelligence, predictive analytics, and real-time visualisation, Smart BIO AIR Version 2.0 evolves from a prototype air purifier into an intelligent autonomous bioreactor platform capable of supporting sustainable indoor air purification, scientific research, and future AI-assisted environmental monitoring applications.
 
+<p align="center">
+  <img src="img/algae bioreactor.gif" width="30%" /> 
+</p>
+
 ---
 ## System Workflow
 
