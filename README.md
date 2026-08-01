@@ -47,7 +47,20 @@ To improve real-world usability, Version 2.0 introduces an activated carbon filt
 Smart BIO AIR Version 2.0 is more than an indoor air purification system. It is an intelligent cyber-physical platform that combines biological engineering, Edge AI, IoT, cloud computing, Large Language Models, and multi-agent artificial intelligence to create a next-generation autonomous environmental monitoring and algae bioreactor research system. The platform is intended for applications in indoor environmental management, smart buildings, sustainable biotechnology, educational laboratories, and future AI-assisted biological research.
 
 ---
+## Problem Statement
+
+Conventional indoor air purification systems mainly depend on mechanical filtration methods that remove pollutants but do not actively participate in biological carbon reduction or environmental adaptation. Algae-based purification systems have strong potential for CO₂ absorption and oxygen generation; however, practical deployment faces challenges such as algae degradation, odour generation, system instability, hardware failures, and limited intelligent monitoring.
+
+Existing IoT-based environmental systems mainly collect sensor data without providing autonomous reasoning, predictive maintenance, or biological analysis. There is a need for an intelligent platform that can continuously monitor air quality, understand algae behaviour, predict failures, and assist operators through AI-based decision support.
+
+Smart BIO AIR Version 2.0 addresses these challenges by combining algae-based purification, Edge AI, IoT sensing, cloud analytics, and Multi-Agent AI to create an autonomous and research-oriented indoor bioreactor platform.
+
+---
 ## Solution
+
+<p align="center">
+  <img src="img/Img2.png" width="50%" /> 
+</p>
 
 Smart BIO AIR Version 2.0 addresses the limitations of conventional indoor air purifiers and first-generation algae-based purification systems by combining biological air treatment, Edge AI, IoT sensing, cloud computing, and Multi-Agent Artificial Intelligence into a unified autonomous platform.
 
@@ -157,6 +170,181 @@ graph TD
     nextjs -- "Manual Actuator Override Settings" --> firebase
     firebase -- "Device Command Node Pull" --> esp32
 ```
+---
+## Features
+
+- **AI-Driven Algae Bioreactor**
+  - Uses *Chlorella vulgaris* for biological CO₂ absorption and oxygen generation with continuous health monitoring.
+
+- **Real-Time Environmental Monitoring**
+  - Collects temperature, light intensity, pressure, gas concentration, algae growth indicators, and motor parameters using IoT sensors.
+
+- **LangGraph Multi-Agent AI System**
+  - Uses specialised AI agents for sensor validation, environmental analysis, algae health assessment, prediction, anomaly detection, maintenance, recommendations, and reporting.
+
+- **Edge AI-Based Autonomous Control**
+  - Performs local decision-making on ESP32 for motor protection, fault detection, and operation during network failures.
+
+- **TinyML Motor Fault Detection**
+  - Uses vibration analysis from MPU6050 sensors to identify abnormal pump conditions.
+
+- **Predictive Analytics**
+  - Forecasts algae growth trends, environmental changes, and equipment behaviour using historical telemetry.
+
+- **AI-Based Monitoring Dashboard**
+  - Provides real-time visualization of sensor data, algae health status, alerts, predictions, reports, and system controls.
+
+- **Odour Management System**
+  - Uses activated carbon filtration to reduce algae-related smell during indoor operation.
+
+- **Automated Research Reports**
+  - Generates PDF diagnostic reports and CSV datasets for experimental analysis.
+
+- **Cloud-Connected Data Management**
+  - Synchronizes telemetry through Firebase Realtime Database for low-latency monitoring and AI processing.
+ 
+---
+
+## Experimental Indoor Testing
+
+Smart BIO AIR was evaluated through prototype-level indoor testing in a real semi-urban environment to study its air purification performance and autonomous operation capability.
+
+**Note:** The experiment was conducted at prototype level and was not performed under controlled laboratory conditions.
+
+### Testing Conditions
+
+| Parameter | Value |
+|-----------|-------|
+| Location | Coimbatore |
+| Environment | Semi-urban indoor environment |
+| Room Size | 250 sq ft |
+| Ventilation | Closed room |
+| Duration | 3 hours per trial |
+| Trials | 5 days |
+
+### Results
+
+| Trial | Initial AQI | Final AQI | AQI Reduction | Initial CO₂ (ppm) | Final CO₂ (ppm) | CO₂ Reduction |
+|------:|------------:|----------:|--------------:|------------------:|----------------:|--------------:|
+| 1 | 162 | 118 | 27.1% | 1180 | 860 | 27.1% |
+| 2 | 176 | 121 | 31.2% | 1280 | 870 | 32.0% |
+| 3 | 158 | 109 | 31.0% | 1150 | 790 | 31.3% |
+| 4 | 171 | 122 | 28.6% | 1240 | 890 | 28.2% |
+| 5 | 168 | 116 | 31.0% | 1210 | 845 | 30.1% |
+
+Across five trials, Smart BIO AIR achieved an average reduction of approximately **30% in AQI and CO₂ levels within two hours**. The Edge AI architecture maintained stable operation during network interruptions, while continuous telemetry logging enabled monitoring of air quality changes and algae chamber behaviour.
+
+---
+## Novelty
+
+Smart BIO AIR Version 2.0 introduces an intelligent cyber-physical approach for algae-based indoor air purification by combining biological systems with autonomous AI reasoning.
+
+### Key Novel Contributions
+
+- **First Multi-Agent AI Architecture for Algae Bioreactor Monitoring**
+  - Introduces a LangGraph-based agentic framework where independent AI agents collaboratively analyse biological, environmental, and mechanical conditions.
+
+- **Biological Digital Twin Concept**
+  - Creates a data-driven representation of algae growth behaviour by correlating environmental parameters, biomass indicators, and operational conditions.
+
+- **Hybrid Edge-Cloud Intelligence**
+  - Combines ESP32-based TinyML execution for fast safety decisions with cloud-based Gemini AI reasoning for advanced analysis.
+
+- **Autonomous Biological Decision Support**
+  - Moves beyond conventional monitoring by enabling AI-assisted interpretation of algae health, stress conditions, and operational requirements.
+
+- **Predictive Failure Prevention for Bioreactor Systems**
+  - Introduces AI-assisted maintenance estimation for pumps, sensors, and critical components before system failure.
+
+- **Research-Oriented AI Documentation Framework**
+  - Automatically generates scientific summaries, diagnostic reports, and experimental records from continuous telemetry.
+
+- **Low-Latency AI-Enabled Environmental Monitoring**
+  - Combines real-time database synchronization and event-based processing for rapid system response.
+
+- **Indoor Deployment-Oriented Algae Engineering**
+  - Addresses practical limitations of algae systems through odour control, autonomous operation, and intelligent monitoring.
+
+- **Integrated Bio-IoT-Agentic AI Platform**
+  - Establishes a new platform combining biotechnology, IoT, Edge AI, Large Language Models, and autonomous agents for sustainable environmental applications.
+  
+---
+## Scope of the Project
+
+Smart BIO AIR Version 2.0 focuses on developing an intelligent indoor algae bioreactor platform for air quality monitoring, biological purification, and AI-assisted research.
+
+The project scope includes:
+
+- Indoor air quality monitoring and analysis
+- Algae growth and health observation
+- Autonomous IoT-based bioreactor operation
+- Edge AI-based safety control
+- Cloud-based AI analytics
+- Predictive maintenance of hardware components
+- AI-assisted environmental research documentation
+- Real-time dashboard monitoring and control
+
+Future expansion areas include:
+
+- Long-duration laboratory validation
+- Larger-scale indoor deployment
+- Advanced carbon fixation measurement
+- Automated algae harvesting systems
+- Smart building integration
+- Multiple bioreactor network management
+
+---
+
+## Tech Stack
+
+### Hardware
+- MYOSA Mini IoT Kit
+- MQ-Series Gas Sensors (MQ-2, MQ-3, MQ-7, MQ-135)
+- DC Air Pump and Motor Control System
+- Relay Module
+- LED Grow Light
+- Activated Carbon Filter
+
+### Embedded & Edge AI
+- Arduino Framework
+- Embedded C/C++
+- Edge Impulse
+- TinyML
+
+### Backend
+- Python
+- FastAPI
+- LangGraph Multi-Agent Framework
+- Pydantic
+- REST API
+- Server-Sent Events (SSE)
+
+### Artificial Intelligence
+- Google Gemini API
+- Large Language Models (LLM)
+- Agentic AI Workflow
+- Predictive Analytics
+- Rule-Based Anomaly Detection
+
+### Database & Cloud
+- Firebase Realtime Database
+- Cloud Telemetry Storage
+- JSON Data Processing
+
+### Frontend
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Recharts
+
+### Data Science
+- Python
+- Pandas
+- NumPy
+- Jupyter Notebook
+- Data Visualization
+- Time-Series Analysis
 
 ---
 
@@ -326,6 +514,7 @@ Ensure you have:
       "emergency_stop": false
     }
     ```
+---
 ## License
 
 This project is licensed under the MIT License. Refer to the LICENSE file for details.
