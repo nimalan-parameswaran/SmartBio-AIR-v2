@@ -33,49 +33,91 @@
 
 ```
 SmartBio-AIR-v2/
-├── backend/
+├── backend/                        # FastAPI Python backend
 │   ├── app.py                      # FastAPI entrypoint (starts listeners & simulation)
 │   ├── config.py                   # App configurations & ENV loading
-│   ├── requirements.txt            # Python requirements (LangGraph, FastAPI, FPDF2, etc.)
 │   ├── local_db.json               # Auto-generated JSON database fallback
-│   ├── firebase/
+│   ├── requirements.txt            # Python requirements (LangGraph, FastAPI, FPDF2, etc.)
+│   ├── test_agents.py              # Tests for LangGraph multi-agent pipeline
+│   ├── agents/                     # LangGraph Multi-Agent implementation
+│   │   ├── algae_agent.py          # Computes photosynthesis eff., growth rates, biomass
+│   │   ├── anomaly_agent.py        # Monitors safety limit bounds & triggers active alerts
+│   │   ├── environment_agent.py    # Calculates environmental stability & comfort indexes
+│   │   ├── maintenance_agent.py    # Calculates pump running hours & Remaining Useful Life
+│   │   ├── prediction_agent.py     # Extrapolates GI, Temp & motor life (1h, 24h, 7d)
+│   │   ├── recommendation_agent.py # Invokes Gemini API for diagnostics
+│   │   ├── report_agent.py         # Exports PDF summaries & telemetry CSV history sheets
+│   │   ├── research_agent.py       # Compiles scientific biological summary logs
+│   │   ├── sensor_agent.py         # Outlier & noise cleaner; reports Sensor Quality
+│   │   └── supervisor.py           # LangGraph manager compiling the agent pipeline
+│   ├── firebase/                   # Firebase DB client and listeners
 │   │   ├── firebase.py             # Firebase DB client (supports REST and local modes)
 │   │   └── listener.py             # SSE Database event stream listener
-│   ├── agents/
-│   │   ├── supervisor.py           # LangGraph manager compiling the agent pipeline
-│   │   ├── sensor_agent.py         # Outlier & noise cleaner; reports Sensor Quality
-│   │   ├── environment_agent.py    # Calculates environmental stability & comfort indexes
-│   │   ├── algae_agent.py          # Computes photosynthesis eff., growth rates, biomass
-│   │   ├── prediction_agent.py     # Extrapolates GI, Temp & motor life (1h, 24h, 7d)
-│   │   ├── anomaly_agent.py        # Monitors safety limit bounds & triggers active alerts
-│   │   ├── maintenance_agent.py    # Calculates pump running hours & Remaining Useful Life
-│   │   ├── recommendation_agent.py # Invokes Gemini API for diagnostics
-│   │   ├── research_agent.py       # Compiles scientific biological summary logs
-│   │   └── report_agent.py         # Exports PDF summaries & telemetry CSV history sheets
-│   ├── llm/
+│   ├── llm/                        # Language model integration
 │   │   ├── gemini.py               # Google Gemini client wrapper
 │   │   └── prompts.py              # Prompt definitions for LLM agents
-│   └── routes/
-│       └── api.py                  # API routes (/api/latest, /api/telemetry, /api/ask-ai)
-└── frontend/
-    ├── pages/
-    │   ├── index.tsx               # Entrypoint (Redirects to /dashboard)
-    │   ├── dashboard.tsx           # Main industrial-style analytics center
-    │   ├── reports.tsx             # PDF/CSV Report compile manager
-    │   └── settings.tsx            # Live Telemetry Injector & configuration
-    ├── components/
-    │   ├── Sidebar.tsx             # Nav bar
-    │   ├── Header.tsx              # System connectivity status bar
-    │   ├── SensorCards.tsx         # Telemetry values grids
-    │   ├── HealthGauge.tsx         # Radial biological health ring & stress progress bars
-    │   ├── MotorControl.tsx        # Pump manual switches, speeds, emergency stops
-    │   ├── Alerts.tsx              # Scrolling alert logging feed
-    │   ├── AgentStatus.tsx         # LangGraph pipeline runtime & decisions list
-    │   ├── PredictionCharts.tsx    # Recharts trend forecaster
-    │   ├── RecommendationPanel.tsx # Gemini troubleshooter tips
-    │   └── ChatWindow.tsx          # Floating "Ask AI Assistant" widget
-    └── services/
-        └── api.ts                  # Frontend API fetch wrappers
+│   ├── models/                     # Data models and schemas
+│   │   └── schemas.py              # Pydantic schema declarations
+│   ├── reports/                    # Directory for generated PDF/CSV reports
+│   ├── routes/                     # API routers
+│   │   └── api.py                  # API routes (/api/latest, /api/telemetry, /api/ask-ai)
+│   ├── services/                   # Business logic services
+│   │   ├── alerts.py               # Alert checking logic
+│   │   ├── analytics.py            # Analytics computations
+│   │   └── prediction.py           # Prediction and estimation logic
+│   └── utils/                      # Helper utility modules
+│       ├── helper.py               # Miscellaneous helpers
+│       └── logger.py               # Logger settings
+├── dataset/                        # Datasets, acquisition, and preprocessing
+│   ├── 1. datasets-main/           # Primary raw and processed data
+│   │   ├── dataset - main.csv      # Main aggregated CSV dataset
+│   │   ├── processed dataset/      # Processed data outputs
+│   │   │   ├── ei_fault.csv
+│   │   │   └── ei_normal.csv
+│   │   └── raw data/               # Raw sensor collection dumps
+│   │       ├── Fault_data.csv
+│   │       ├── Normal1_data.csv
+│   │       └── Normal2_data.csv
+│   ├── 2. data acquisition/        # Scripts for telemetry gathering
+│   │   ├── DataCollection.ino      # ESP32 code for reading and transmitting sensor readings
+│   │   └── logger.py               # Python serial data logging utility
+│   └── 3. data preprocessing/      # Notebooks for data transformation
+│       └── Data_Preprocessing_and_EDA.ipynb # Jupyter notebook for cleaning and EDA
+├── frontend/                       # Next.js React frontend application
+│   ├── eslint.config.mjs           # ESLint configuration
+│   ├── next.config.ts              # Next.js configurations
+│   ├── package.json                # Frontend package dependencies & scripts
+│   ├── tsconfig.json               # TypeScript configuration
+│   ├── components/                 # Reusable React components
+│   │   ├── AgentStatus.tsx         # LangGraph pipeline runtime & decisions list
+│   │   ├── Alerts.tsx              # Scrolling alert logging feed
+│   │   ├── ChatWindow.tsx          # Floating "Ask AI Assistant" widget
+│   │   ├── Header.tsx              # System connectivity status bar
+│   │   ├── HealthGauge.tsx         # Radial biological health ring & stress progress bars
+│   │   ├── MotorControl.tsx        # Pump manual switches, speeds, emergency stops
+│   │   ├── PredictionCharts.tsx    # Recharts trend forecaster
+│   │   ├── RecommendationPanel.tsx # Gemini troubleshooter tips
+│   │   ├── SensorCards.tsx         # Telemetry values grids
+│   │   └── Sidebar.tsx             # Navigation bar
+│   ├── pages/                      # Application route views
+│   │   ├── index.tsx               # Entrypoint (Redirects to /dashboard)
+│   │   ├── dashboard.tsx           # Main industrial-style analytics center
+│   │   ├── reports.tsx             # PDF/CSV Report compile manager
+│   │   └── settings.tsx            # Live Telemetry Injector & configuration
+│   ├── services/                   # Frontend API connectors
+│   │   └── api.ts                  # Frontend API fetch wrappers
+│   └── styles/                     # Tailwind or global styling sheets
+│       └── globals.css             # Global Tailwind/CSS rules
+├── myosa_sketche/                  # Microcontroller firmware files
+│   └── main.ino                    # Core ESP32 sketch for sensor readout and actuators
+└── TinyML/                         # Embedded machine learning models and pipelines
+    ├── README.md                   # TinyML project-specific documentation
+    ├── fault diagnosis and anomaly detection/ # Exported Edge Impulse Arduino libraries
+    │   ├── ei-myosa-6vdmp-fault-detection-arduino-1.0.2-TFlite.zip
+    │   └── ei-myosa-6vdmp-fault-detection-arduino-1.0.3-EON.zip
+    ├── src/                        # TinyML pipeline documentation assets
+    └── test inference/             # Embedded testing firmware
+        └── test_inference.ino      # Arduino test sketch running on-device inference
 ```
 
 ---
