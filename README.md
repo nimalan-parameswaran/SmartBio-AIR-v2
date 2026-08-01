@@ -175,6 +175,13 @@ graph TD
     firebase -- "Device Command Node Pull" --> esp32
 ```
 ---
+
+<div align="center">
+  <img src="img/img3.png" width="45%" />
+  <img src="img/img4.png" width="45%" />
+</div>
+
+---
 ## Features
 
 - **AI-Driven Algae Bioreactor**
