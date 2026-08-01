@@ -58,10 +58,6 @@ Smart BIO AIR Version 2.0 addresses these challenges by combining algae-based pu
 ---
 ## Solution
 
-<p align="center">
-  <img src="img/Img2.png" width="50%" /> 
-</p>
-
 Smart BIO AIR Version 2.0 addresses the limitations of conventional indoor air purifiers and first-generation algae-based purification systems by combining biological air treatment, Edge AI, IoT sensing, cloud computing, and Multi-Agent Artificial Intelligence into a unified autonomous platform.
 
 The system employs **living microalgae (*Chlorella vulgaris*)** as the primary biological medium for capturing carbon dioxide and supporting natural oxygen generation. Unlike conventional filtration systems that only trap airborne pollutants, the algae bioreactor performs continuous biological treatment while simultaneously serving as a living research model for studying environmental changes and biomass growth.
@@ -87,10 +83,6 @@ To overcome practical deployment challenges identified during Smart BIO AIR Vers
 A modern **Next.js** web dashboard serves as the operational command centre, providing live telemetry visualisation, biological health indicators, AI-generated diagnostics, predictive analytics, actuator controls, maintenance schedules, and an interactive **Ask AI** assistant for real-time system interaction. Researchers can also generate PDF diagnostic reports and CSV telemetry datasets for long-term analysis and documentation.
 
 By integrating biological air purification with Edge AI, TinyML, cloud-native multi-agent intelligence, predictive analytics, and real-time visualisation, Smart BIO AIR Version 2.0 evolves from a prototype air purifier into an intelligent autonomous bioreactor platform capable of supporting sustainable indoor air purification, scientific research, and future AI-assisted environmental monitoring applications.
-
-<p align="center">
-  <img src="img/algae bioreactor.gif" width="30%" /> 
-</p>
 
 ---
 ## System Workflow
@@ -176,6 +168,15 @@ graph TD
 ```
 ---
 
+<h3 align="center"> Prototype </h3>
+<p align="center">
+  <img src="img/Img2.png" width="45%" />
+  <img src="img/algae bioreactor.gif" width="45%" /> 
+</p>
+
+---
+
+<h3 align="center"> Dashboard </h3>
 <div align="center">
   <img src="img/img3.png" width="45%" />
   <img src="img/img4_.png" width="45%" />
