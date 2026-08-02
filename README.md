@@ -185,9 +185,11 @@ graph TD
 ---
 
 <h3 align="center"> Demo </h3>
-<div align="center">
-  <img src="img/demo.mp4" width="45%" />
-</div>
+
+
+https://github.com/user-attachments/assets/5368c0dd-8271-41a3-8d61-fd683661443b
+
+
 
 ---
 ## Features
