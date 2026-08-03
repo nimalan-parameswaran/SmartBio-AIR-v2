@@ -47,6 +47,12 @@ To improve real-world usability, Version 2.0 introduces an activated carbon filt
 Smart BIO AIR Version 2.0 is more than an indoor air purification system. It is an intelligent cyber-physical platform that combines biological engineering, Edge AI, IoT, cloud computing, Large Language Models, and multi-agent artificial intelligence to create a next-generation autonomous environmental monitoring and algae bioreactor research system. The platform is intended for applications in indoor environmental management, smart buildings, sustainable biotechnology, educational laboratories, and future AI-assisted biological research.
 
 ---
+
+
+https://github.com/user-attachments/assets/19079a70-1206-4cfc-801b-c2892d2332e3
+
+
+---
 ## Problem Statement
 
 Conventional indoor air purification systems mainly depend on mechanical filtration methods that remove pollutants but do not actively participate in biological carbon reduction or environmental adaptation. Algae-based purification systems have strong potential for CO₂ absorption and oxygen generation; however, practical deployment faces challenges such as algae degradation, odour generation, system instability, hardware failures, and limited intelligent monitoring.
@@ -91,6 +97,11 @@ By integrating biological air purification with Edge AI, TinyML, cloud-native mu
   <img src="img/system workflow.png" width=auto>
 </p>
 
+---
+## Multi-Agent AI Workflow
+<p align="center">
+  <img src="img/Multi-Agent AI Workflow.png" width=auto>
+</p>
 ---
 
 ## System Architecture
