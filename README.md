@@ -183,6 +183,15 @@ graph TD
 </div>
 
 ---
+
+<h3 align="center"> Demo </h3>
+
+
+https://github.com/user-attachments/assets/5368c0dd-8271-41a3-8d61-fd683661443b
+
+
+
+---
 ## Features
 
 - **AI-Driven Algae Bioreactor**
